@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>AI Predicted Value</h1>
+<div class="results">
+    <div class="result-item">
+        <h2>Disease</h2>
+        <p>{{ disease.name }}</p>
+    </div>
+    <div class="result-item">
+        <h2>Description</h2>
+        <p>{{ disease.description }}</p>
+    </div>
+    <div class="result-item">
+        <h2>Precaution</h2>
+        <p>{{ disease.precaution }}</p>
+    </div>
+    <div class="result-item">
+        <h2>Medications</h2>
+        <p>{{ disease.medications }}</p>
+    </div>
+    <div class="result-item">
+        <h2>Workouts</h2>
+        <p>{{ disease.workouts }}</p>
+    </div>
+    <div class="result-item">
+        <h2>Diets</h2>
+        <p>{{ disease.diets }}</p>
+    </div>
+</div>
+{% endblock %}

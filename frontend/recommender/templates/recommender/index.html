@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Health Center!!!</h1>
+<div class="recommendation-form">
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.symptoms.id_for_label }}">Select Symptoms:</label>
+        {{ form.symptoms }}
+        <button type="button" id="start-speech">Start Speech Recognition</button>
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+<script src="{% static 'js/speech_recognition.js' %}"></script>
+{% endblock %}
